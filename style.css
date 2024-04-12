@@ -1,0 +1,293 @@
+@media only screen and (max-width: 600px) {
+    /* CSS rules for smaller screens */
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* CSS rules for tablets */
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    /* CSS rules for larger screens */
+  }
+  
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("/images/lostimage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: relative; /* Needed for z-index */
+    background-image: url("/images/logo5.jpeg");
+    background-size:cover;
+    background-position:top center;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the last value (0.5) for darkness */
+    z-index: 1; /* Ensure it's above the background image */
+}
+
+.main {
+    /* Your existing styles for the main content */
+    position: relative; /* Ensure it's above the overlay */
+    z-index: 2; /* Ensure it's above the overlay */
+}
+
+/* Other CSS styles for your elements */
+
+
+nav{
+    width:90% ;
+    position:sticky ;
+    margin: 10px auto ;
+    z-index: 1;
+    display:flex ;
+    align-items:center ;
+
+
+}
+.logo img{
+    width: 150px;
+    border-radius: 30px;
+    height: 100px;
+}
+.nav-links{
+    flex:1 ;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style:none ;
+    display:inline-block ;
+    margin:0 20px ;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+  .controls button {
+    padding: 10px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .controls button:hover {
+    background-color: #0056b3;
+  }
+
+
+.controls{
+    position:absolute ;
+    right: 3%;
+    bottom:60% ;
+    transform: translatey(-50%);
+
+}
+.controls h3{
+    margin: 15px 0;
+    color: #fff;
+}
+
+ 
+.form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+.message-container {
+    display: none;
+    position: fixed;
+    top: 20px; /* Adjust the top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Card layout */
+
+#itemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction:column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.details {
+    padding: 10px;
+    text-align: center;
+}
+
+.details h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.details p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
+#home img {
+    max-width: 100%; /* Ensure the image fits within its container */
+    border-radius: 30px;
+    margin-left: 50px;
+
+    
+}
+
+.catchy-content {
+    padding: 20px; /* Add padding to create space around the content */
+}
+
+.catchy-content h2 {
+    
+    font-size: 24px; /* Adjust as needed */
+    color: #ffffff; /* Adjust text color */
+}
+
+.catchy-content p {
+    font-size: 16px; /* Adjust as needed */
+    color: #ffffff; /* Adjust text color */
+    text-align:left;
+
+}
+/* CSS for the footer */
+footer {
+    background-color: #1a1919;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-section {
+    margin: 0 20px 20px;
+    flex: 1;
+    max-width: 300px;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    overflow-y: auto;
+}
+
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}

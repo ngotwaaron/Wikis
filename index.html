@@ -2,31 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost and Found</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="overlay"></div>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="/images/logo11.png" alt="logo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#" onclick="refreshPage()">Home</a></li>
+                    <li><a href="#" id="signInLink" onclick="showSignIn()">Sign in</a></li>
+                    <li><a href="#" id="signUpLink" onclick="showSignUp()">Sign up</a></li>
+                </ul>
+            </div>
+        </nav>
 
-    
+        <div class="controls">
+            <button id="viewLostBtn">View Lost Items</button>
+            <button id="viewFoundBtn">View Found Items</button>
+            <div class="report-items">
+                <button id="reportLostBtn">Report Lost Items</button>
+                <button id="reportFoundBtn">Report Found Items</button>
+            </div>
+        </div>
 
+        <div id="itemsContainer">
+            <div id="home">
+                <div class="catchy-content">
+                    <h2>Welcome to our Lost and Found Website!</h2>
+                    <p>Lost something valuable? We're here to help. <br>
+                        Our platform connects you with people who've found
+                        your lost items. <br> Report lost items easily and browse found items nearby.</p>
 
+                </div>
+                <img src="/images/logo2.webp" alt="">
 
+            </div>
+        </div>
+    </div>
 
+    <!-- Sign-in Form -->
+    <div id="signInForm" class="form-container">
+        <form class="form" onsubmit="signIn()">
+            <h2>Sign in</h2>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign in</button>
+        </form>
+    </div>
 
+    <!-- Sign-up Form -->
+    <div id="signUpForm" class="form-container">
+        <form class="form" onsubmit="signUp()">
+            <h2>Sign up</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
 
+    <!-- Form for reporting lost items -->
+    <div id="reportLostForm" class="form-container">
+        <form class="form" onsubmit="reportLostItem()">
+            <h2>Report Lost Item</h2>
+            <input type="text" id="lostItemName" placeholder="Item Name" required>
+            <input type="text" id="lostItemColor" placeholder="Item Color" required>
+            <textarea id="lostItemDescription" placeholder="Item Description" required></textarea>
+            <button type="submit">Report Lost Item</button>
+        </form>
+    </div>
 
+    <!-- Form for reporting found items -->
+    <div id="reportFoundForm" class="form-container">
+        <form class="form" onsubmit="reportFoundItem()">
+            <h2>Report Found Item</h2>
+            <input type="text" id="foundItemName" placeholder="Item Name" required>
+            <input type="text" id="foundItemColor" placeholder="Item Color" required>
+            <textarea id="foundItemDescription" placeholder="Item Description" required></textarea>
+            <button type="submit">Report Found Item</button>
+        </form>
+    </div>
 
+    <div id="messageContainer" class="message-container"></div>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section contact-us">
+            <h3>Contact Us</h3>
+            <p>Email: info@lostandfound.com</p>
+            <p>Phone: +254 767456-789</p>
+        </div>
+        <div class="footer-section faq">
+            <h3>FAQs</h3>
+            <ul>
+                <li>How do I report a lost item?</li>
+                <li>What should I do if I found someone else's item?</li>
+                <li>How can I search for lost items?</li>
+            </ul>
+        </div>
+        <div class="footer-section copy">
+            <p>&copy; 2024 Lost and Found</p>
+        </div>
+    </footer>
 
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
